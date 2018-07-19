@@ -91,6 +91,15 @@
 <br>
 
 ###### Analytics
+- **Athena**: Service that allows you to run SQL queries in S3 buckets.
+- **EMR**: "Elastic MapReduce" - Processing large amount of data. **Important**
+- **CloudSearch**: Search services.
+- **ElasticSearch**: Search services.
+- **Kinesis**: **Important** for Big data & Solutions Architect. A way to ingest large amounts of data into AWS. (e.g. Social media feeds/tweets)
+- **Kinesis Video Streams**: ReInvent 2018. Ingest videos & run processing against it.
+- **QuickSight**: Great BI tool and is very cheap compared to other tools.
+- **Data Pipeline**: A way of moving data between different AWS services. 
+- **Glue**: Used for ETL - (Extract, Transform, Load).
 <br>
 
 ###### Security & Identity & Compliance
