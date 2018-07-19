@@ -1,4 +1,4 @@
-# AWS Certified Solutions Architect Associate
+# AWS Certified Solutions Architect Associate Study Notes
 ------------
 ### Overview
 ###### AWS Global Infrastructure:
