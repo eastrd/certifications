@@ -3,6 +3,7 @@
 ### Overview
 ###### AWS Global Infrastructure:
 - Consists of a bunch of different geographically distinct regions around the world. Inside regions there are at least two availability zones (AZ). An AZ is simply data center that's geographically isolated to each other in case of natural disasters such as flooding. Edge locations are way to cache data typically using CloudFront which is AWS's CDN.
+<br>
 
 ###### Compute:
 - **EC2**: "Elastic Compute Cloud" - Essentially a VM inside the AWS platform..
@@ -11,6 +12,7 @@
 - **Lambda**: A platform where you can upload code to the cloud tahat runs without worrying about any underlying physical or virtual machines or systems. Lambda is used in Solutions Architect cert & Developer Associate cert.
 - **Lightsail**: AWS's VPS service for people who don't want to understand anything about AWS or any underlying structures such as security groups etc. This will provision you with a server and give you a fixed IP address to login the server, either SSH or RDP and comes with a really cool management console. Basically a very watered down version of EC2...
 - **Batch**: Used for batch computing in cloud, currently not covered in any AWS certifications.
+<br>
 
 ###### Storage:
 - **S3**: "Simple Storage Service" - object-based storage. You upload files to things called "buckets" that are in the cloud. S3 is very important for this cert.
@@ -18,12 +20,14 @@
 - **Glacier**: For data archival, similar to a cold storage with cheap pricing compare to normal storage.
 - **Snowball**: A physical way to bring in large amounts of data into the AWS data center rather than transmitting it through broadband or wifi. It's easier to just send terabytes of data physically into data centers...
 - **Storage Gateway**: Virtual appliances (e.g. VM in data center or HQ) that will replicate information back to S3. There are 4 different types of storage gateways.
+<br>
 
 ###### Databases:
 - **RDS**: "Relational Database Services" - MySQL / PostgreSQL / SQL Server / AWS Aurora / Oracle etc.
 - **DynamoDB**: A non-relational database.
 - **Elasticache**: A way of caching commonly used queries from database. (e.g. caching top 10 products in Elasticache rather than having web servers pulling from databases so to free up database servers to do other queries)
 - **Redshift**: Data warehousing / Business intelligence - really complex queries (e.g. Management wants to know profit/loss of a particular item in Asia Pacific region. This of course can be done with production database but this query is going to take a lot of time. Hence it's suitable to use Redshift which is built for data warehousing).
+<br>
 
 ##### Migration:
 - **AWS Migration Hub**: A tracking service that allows you to track your applications as you migrate them to AWS. It also integrates other services within the Migration framework.
@@ -31,6 +35,7 @@
 - **Database Migration Service**: Very easy way to migrate databases from on-premise into AWS.
 - **Server Migration Service**: Very similar to Database Migration Service. It helps to migrate virtual / physical servers onto AWS cloud.
 - **Snowball**: Snowball is in between Storage and Migration categories. It is used for migrating large amounts of data into the cloud. (Terabytes)
+<br>
 
 ##### Networking & Content Delivery
 - **VPC**: "Virtual Private Cloud" - Think of it like a virtual data center. You configure firewalls, AZ, network address ranges, network ICLs, route tables. It is complicated but very important.
@@ -38,30 +43,66 @@
 - **Route53**: Amazon's DNS service - Looking up domain name to IPv4 / IPv6 address.
 - **API Gateway**: It's a way of creating your own APIs for other services to talk to. It's a big subject in Developer Associate cert and comes up in this cert.
 - **Direct Connect**: It's a way of running a dedicated line from your coop office or data center into Amazon & will directly connect to your VPC. It's a big topic for this cert.
+<br>
 
-##### Developer Tools (it never came up in any of the associate exams... but good to know)
+###### Developer Tools
+(it never came up in any of the associate exams.. but.. good to know..)
 - **CodeStar**: Getting a group of developers working together quite easily. It's a way of project managing your code. Basically you set up your code and have a continuous delivery toolchain and can release your code within minute. 
 - **CodeCommit**: A place to store your code (i.e. source control service - Your own private Git repository).
 - **CodeBuild**: Once you get your code ready, CodeBuild will compile that code for you or run testings against it and it will produce software packages that are ready to deploy.
 - **CodeDeploy**: It automates application deployments to EC2 instances, but can also to premise instances as well as Lambda functions.
 - **CodePipeline**: It's a continuous delivery service and is used to model/visualize/automate steps required to release your software.
 - **X-Ray**: Used to debug & analyze serverless applications. It has request tracing, so you can go in and find root causes of issues and performance bottlenecks.
+- **Cloud9**: An IDE environment in AWS console on web browser.
+<br>
 
-##### Management Tools
-##### Media Services
-##### Machine Learning
-##### Analytics
-##### Security & Identity & Compliance
-##### Media Services
-##### AR / VR
-##### Application Integration
-##### Customer Engagement
-##### Business Productivity
-##### Desktop & App Streaming
-##### IoT
-##### Game Development
+###### Management Tools
+- **CloudWatch**: A monitoring service. It is the bread and butter of SysOps Administrator cert.
+- **CloudFormation**: It is used all the time by solution architects in real life. It is **VERY IMPORTANT** in Solutions Architect Associate & Professional certs. It is a way of scripting infrastructure. It just takes all infrastructures and turns them into code. With a CloudFormation you can use templates or reuse the code to deploy all kind of infrastructures. It is super fun.
+- **CloudTrail**: It logs changes to your AWS environment. It is turned on by default but only stores its records for one week. Highly recommend turning Cloud Trail on for across all new regions. (e.g If someone hacked your account and used it for crypto mining, you can figure out how and where they are using that service). **Very Important** for Security and Solutions Architect.
+- **Config**: A really cool technology that monitors the configuration of your entire AWS environment. It has a pointing time snapshots so you can move the timer backwards/forwards by days/months so you can visualize your AWS environments and see how they are all configured. **Very Important**
+- **OpsWorks**: Similar to ElasticBeanstalk - Uses Chef and Puppet to automate your environment. Covered in SysOps Associate cert, but a little bit in this cert.
+- **Service Catalog**: A way of managing catalogs services that are for AWS, this can be from VM images, individual OSes, Software, DBs, all the way to multi-tier architectures. It currently does not feature in any associate or professional exams.
+- **Systems Manager**: An interface for managing AWS resources, typically for EC2. It can be also used for patch maintance (e.g. Security patches across thousands of EC2 instances, it's easiler to use Systems Manager). It currently does not feature in any associate or professional exams, but as a system admin, you need to know it to do your job.
+- **Trusted Advisor**; It gives you advises across different displines: Security, Saving money (downscaling). It is favoured in Security Associate, Cloud Practioneer, and Solutions Architect Associate, even in Pros...
+- **Managed Services**: It helps you manage EC2 instances / autoscaling sort of things...
+<br>
 
+###### Media Services
+<br>
 
+###### Machine Learning
+<br>
+
+###### Analytics
+<br>
+
+###### Security & Identity & Compliance
+<br>
+
+###### Media Services
+<br>
+
+###### AR / VR
+<br>
+
+###### Application Integration
+<br>
+
+###### Customer Engagement
+<br>
+
+###### Business Productivity
+<br>
+
+###### Desktop & App Streaming
+<br>
+
+###### IoT
+<br>
+
+###### Game Development
+<br>
 
 ---------
 ##### AWS Global Infrastructure
