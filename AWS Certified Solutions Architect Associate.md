@@ -1,4 +1,4 @@
-# AWS Certified Solutions Architect Associate Study Notes
+# AWS Certified Solutions Architect Associate
 ------------
 ### Overview
 ###### AWS Global Infrastructure:
@@ -16,7 +16,18 @@
 - **S3**: "Simple Storage Service" - object-based storage. You upload files to things called "buckets" that are in the cloud. S3 is very important for this cert.
 - **EFS**: "Elastic File System" - Network attached storage. Store files on any EFS volume and mount it to any VM.
 - **Glacier**: For data archival, similar to a cold storage with cheap pricing compare to normal storage.
-- **Snowball**: 
+- **Snowball**: A physical way to bring in large amounts of data into the AWS data center rather than transmitting it through broadband or wifi. It's easier to just send terabytes of data physically into data centers...
+- **Storage Gateway**: Virtual appliances (e.g. VM in data center or HQ) that will replicate information back to S3. There are 4 different types of storage gateways.
+
+##### Databases:
+- **RDS**: "Relational Database Services" - MySQL / PostgreSQL / SQL Server / AWS Aurora / Oracle etc.
+- **DynamoDB**: A non-relational database.
+- **Elasticache**: A way of caching commonly used queries from database. (e.g. caching top 10 products in Elasticache rather than having web servers pulling from databases so to free up database servers to do other queries)
+- **Redshift**: Data warehousing / Business intelligence - really complex queries (e.g. Management wants to know profit/loss of a particular item in Asia Pacific region. This of course can be done with production database but this query is going to take a lot of time. Hence it's suitable to use Redshift which is built for data warehousing).
+
+##### Migration:
+- 
+
 
 
 
