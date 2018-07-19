@@ -1,4 +1,4 @@
-# AWS Certified Solutions Architect Associate
+#  AWS Certified Solutions Architect Associate
 ------------
 ### Overview
 ###### AWS Global Infrastructure:
@@ -26,7 +26,13 @@
 - **Redshift**: Data warehousing / Business intelligence - really complex queries (e.g. Management wants to know profit/loss of a particular item in Asia Pacific region. This of course can be done with production database but this query is going to take a lot of time. Hence it's suitable to use Redshift which is built for data warehousing).
 
 ##### Migration:
-- 
+- **AWS Migration Hub**: A tracking service that allows you to track your applications as you migrate them to AWS. It also integrates other services within the Migration framework.
+- **Application Discovery Service**: An automated tool not only detects what application you have, but also its dependencies. (e.g SQL server or Domain Controller ).
+- **Database Migration Service**: Very easy way to migrate databases from on-premise into AWS.
+- **Server Migration Service**: Very similar to Database Migration Service. It helps to migrate virtual / physical servers onto AWS cloud.
+- **Snowball**: Snowball is in between Storage and Migration categories. It is used for migrating large amounts of data into the cloud. (Terabytes)
+
+
 
 
 
@@ -41,8 +47,6 @@
 - **Exam Tips:** Understand the difference between a region, AZ, and an edge location.
 
 ##### Compute
-- 
-
 ##### Storage
 ##### Databases
 ##### Migration
