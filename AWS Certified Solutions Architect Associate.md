@@ -32,7 +32,33 @@
 - **Server Migration Service**: Very similar to Database Migration Service. It helps to migrate virtual / physical servers onto AWS cloud.
 - **Snowball**: Snowball is in between Storage and Migration categories. It is used for migrating large amounts of data into the cloud. (Terabytes)
 
+##### Networking & Content Delivery
+- **VPC**: "Virtual Private Cloud" - Think of it like a virtual data center. You configure firewalls, AZ, network address ranges, network ICLs, route tables. It is complicated but very important.
+- **CloudFront**: Amazon's content delivery network. CloudFront stores media and image files from far away location closer to where the user is at, so the user can access these assets from a nearby edge location instead of pulling them from far away location.
+- **Route53**: Amazon's DNS service - Looking up domain name to IPv4 / IPv6 address.
+- **API Gateway**: It's a way of creating your own APIs for other services to talk to. It's a big subject in Developer Associate cert and comes up in this cert.
+- **Direct Connect**: It's a way of running a dedicated line from your coop office or data center into Amazon & will directly connect to your VPC. It's a big topic for this cert.
 
+##### Developer Tools (it never came up in any of the associate exams... but good to know)
+- **CodeStar**: Getting a group of developers working together quite easily. It's a way of project managing your code. Basically you set up your code and have a continuous delivery toolchain and can release your code within minute. 
+- **CodeCommit**: A place to store your code (i.e. source control service - Your own private Git repository).
+- **CodeBuild**: Once you get your code ready, CodeBuild will compile that code for you or run testings against it and it will produce software packages that are ready to deploy.
+- **CodeDeploy**: It automates application deployments to EC2 instances, but can also to premise instances as well as Lambda functions.
+- **CodePipeline**: It's a continuous delivery service and is used to model/visualize/automate steps required to release your software.
+
+##### Management Tools
+##### Media Services
+##### Machine Learning
+##### Analytics
+##### Security & Identity & Compliance
+##### Media Services
+##### AR / VR
+##### Application Integration
+##### Customer Engagement
+##### Business Productivity
+##### Desktop & App Streaming
+##### IoT
+##### Game Development
 
 
 
