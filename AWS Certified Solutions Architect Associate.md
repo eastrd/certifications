@@ -45,6 +45,7 @@
 - **CodeBuild**: Once you get your code ready, CodeBuild will compile that code for you or run testings against it and it will produce software packages that are ready to deploy.
 - **CodeDeploy**: It automates application deployments to EC2 instances, but can also to premise instances as well as Lambda functions.
 - **CodePipeline**: It's a continuous delivery service and is used to model/visualize/automate steps required to release your software.
+- **X-Ray**: Used to debug & analyze serverless applications. It has request tracing, so you can go in and find root causes of issues and performance bottlenecks.
 
 ##### Management Tools
 ##### Media Services
