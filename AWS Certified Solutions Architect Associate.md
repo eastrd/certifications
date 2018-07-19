@@ -79,6 +79,15 @@
 <br>
 
 ###### Machine Learning
+- **SageMaker**: Easy access for devs onto deep learning. (reInvent 2017)
+- **Comprehend**: It does sentiment analysis around data.
+- **DeepLens**: A physical camera hardware that can live detect objects.
+- **Lex**: Powers Alexa service - An AI chatbot.
+- **Machine Learning**: Traditional machine learnings.
+- **Polly**: Text-to-speech service that sounds human, it can choose different accents.
+- **Rekognition**: It does both video and image recognitions.
+- **Amazon Translate**: Similar to Google Translate, but Amazon's...
+- **Amazon Transcribe**: Service that does automatic speech recognition (Speech-to-text).
 <br>
 
 ###### Analytics
