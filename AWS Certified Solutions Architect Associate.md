@@ -19,7 +19,7 @@
 - **Snowball**: A physical way to bring in large amounts of data into the AWS data center rather than transmitting it through broadband or wifi. It's easier to just send terabytes of data physically into data centers...
 - **Storage Gateway**: Virtual appliances (e.g. VM in data center or HQ) that will replicate information back to S3. There are 4 different types of storage gateways.
 
-##### Databases:
+###### Databases:
 - **RDS**: "Relational Database Services" - MySQL / PostgreSQL / SQL Server / AWS Aurora / Oracle etc.
 - **DynamoDB**: A non-relational database.
 - **Elasticache**: A way of caching commonly used queries from database. (e.g. caching top 10 products in Elasticache rather than having web servers pulling from databases so to free up database servers to do other queries)
