@@ -69,6 +69,13 @@
 <br>
 
 ###### Media Services
+(Brand new from reInvent 2017 except Elastic Transcoder)
+- **Elastic Transcoder**: It takes the video and resizes it so it can be adapted onto different resolutions.
+- **MediaConvert**: File based video transcoding service with broadcast grade features.
+- **MediaLive**: Broadcast grade live video processing service.
+- **MediaPackage**: Prepares and protects videos for delivery over internet.
+- **MediaStore**: Storage service optimized for videos.
+- **MediaTailor**: Allows to do targeted advertising into video streams without sacrificing broadcast grade service.
 <br>
 
 ###### Machine Learning
