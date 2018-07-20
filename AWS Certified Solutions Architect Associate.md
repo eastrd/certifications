@@ -116,8 +116,14 @@
 - **Artifact**: Portal for on-demand access to download AWS compliant reports (e.g. SOC) and also manages selected agreements.
 <br>
 
-###### Media Services
+###### Mobile Services
+- **Mobile Hub**: A management console for mobile apps by using mobile hub SDKs to connect to AWS.
+- **Pinpoint**: A way of using targeted push notifications to drive mobile engagement.
+- **AWS AppSync**: Automatically upstates the data in web & mobile apps real time. It also updates data for offline users as soon as they connect.
+- **Device Farm**: A way of testing apps on reallife devices. (e.g. Android, iPhones)
+- **Mobile Analytics**: Analytics service for mobiles...
 <br>
+
 
 ###### AR / VR
 <br>
@@ -161,7 +167,7 @@
 ##### Machine Learning
 ##### Analytics
 ##### Security & Identity & Compliance
-##### Media Services
+##### Mobile Services
 ##### AR / VR
 ##### Application Integration
 ##### Customer Engagement
