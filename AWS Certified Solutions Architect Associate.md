@@ -103,6 +103,17 @@
 <br>
 
 ###### Security & Identity & Compliance
+- **IAM**: "Identity Access Management" - **Important**
+- **Cognito**: Authentication service for devices.
+- **GuardDuty**: Monitors malicious activities on AWS account.
+- **Inspector**: An agent to be installed on EC2 instances to check for vulnerabilities. It generates a severity list. - **Important**
+- **Macie**: It scans S3 buckets and look for PII ("Personally Identifiable Information, e.g Addresses, TFN)
+- **Certificate Manager**: You get SSL cert files for free. This tool manages SSL certificates. - **Need to understand**
+- **CloudHSM**: Hardware security modules. It can be used to store ssh keys and other encryption keys. - **Important**
+- **Directory Service**: A way of integrating Microsoft Active Directory with AWS services. - **Somewhat Important**
+- **WAF**: "Web Application Firewall" - Application layer firewall to stop malicious web tarffic.  - **Important**
+- **Shield**: Helps to prevent 24/7 DDoS attacks.
+- **Artifact**: Portal for on-demand access to download AWS compliant reports (e.g. SOC) and also manages selected agreements.
 <br>
 
 ###### Media Services
