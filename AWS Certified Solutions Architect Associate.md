@@ -126,9 +126,16 @@
 
 
 ###### AR / VR
+- **Sumerian**: Language that is used for AR/VR design. It allows you to use common set of tools to create these environments. You don't even need to understand how to code.
 <br>
 
+
 ###### Application Integration
+- **Step Functions**: A way of managing lambda functions with different steps to go through them.
+- **Amazon MQ**: A way of doing message queues. (Similar to RabbitMQ)
+- **SNS**: Notification service. (e.g. Billing alarm) **Important**
+- **SQS**: A queue that can be used to decoupling infrastructure. **Important**
+- **SWF**: "Super Workflow Service" - It creates a simple workflow job that essentially involves human actions in it. **Important**
 <br>
 
 ###### Customer Engagement
