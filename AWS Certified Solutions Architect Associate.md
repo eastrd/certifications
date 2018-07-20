@@ -139,18 +139,31 @@
 <br>
 
 ###### Customer Engagement
+- **Connect**: It is a Contact-Center-As-A-Service, think of it like having your own call center in the cloud. It enables you to configure service & have dynamic personal / natural customer engagement in scale.
+- **Simple Email Service**: A great way of sending large amounts of emails. Highly customisable..
 <br>
 
 ###### Business Productivity
+- **Alexa for Business**: Can be used to dial into a meeting room / inform IT that the printers are broken / Order ink for the printers...
+- **Chime**: It is like Google Hangout / Zoom Meeting. It is used for video conferencing. It can record the meeting and is very accurate, even with low bandwidth.
+- **Work Docs**: Similar to DropBox but for AWS...
+- **WorkMail**: Similar to Office365...
 <br>
 
 ###### Desktop & App Streaming
+- **Workspaces**: VDI solution - Running an actual OS on the AWS cloud that streams down to the device. 
+- **AppStream 2.0**: Similarily runs an app on the cloud but streams down to device. Similar to Citrix...
 <br>
 
 ###### IoT
+- **iOT**: ...
+- **iOT Device Management**: Managing many of devices at scale...
+- **Amazon FreeRTOS**: Completely free... An OS for microcontroller.
+- **Greengrass**: A software that runs local compute, messaging, sync, data caching, ML interface capabilities for connected devices in a secure way., 
 <br>
 
 ###### Game Development
+- **GameLift**: A service that helps you to develop games including VR games...
 <br>
 
 ---------
