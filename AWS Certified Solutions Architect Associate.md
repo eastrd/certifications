@@ -165,7 +165,9 @@
 ###### Game Development
 - **GameLift**: A service that helps you to develop games including VR games...
 <br>
+
 --------
+
 Examinable
 - AWS Global Infrastructure
 - Compute
@@ -178,7 +180,9 @@ Examinable
 - Security & Identity & Compliance
 - Application Integration
 - Desktop & App Streaming
+
 ---------
+
 ##### AWS Global Infrastructure
 - 16 regions in the world, 44 availability zones (Dec 2017)
 - 6 more regions & 17 more availability zones (2018)
