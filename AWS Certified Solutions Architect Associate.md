@@ -168,7 +168,7 @@
 
 --------
 
-Examinable
+### Examinable Sections
 - AWS Global Infrastructure
 - Compute
 - Storage
@@ -183,7 +183,7 @@ Examinable
 
 ---------
 
-##### AWS Global Infrastructure
+#### AWS Global Infrastructure
 - 16 regions in the world, 44 availability zones (Dec 2017)
 - 6 more regions & 17 more availability zones (2018)
 - **AWS will NOT test you on specific numbers, nor the number of AZ or Regions!**
@@ -192,24 +192,88 @@ Examinable
 - Edge Locations: Endpoints for AWS used for caching contents. (consists CloudFront, AWS CDNs). More edge locations (currently 96) than regions.
 - **Exam Tips:** Understand the difference between a region, AZ, and an edge location.
 
-##### Compute
-##### Storage
-##### Databases
-##### Migration
-##### Networking & Content Delivery
-##### Developer Tools
-##### Management Tools
-##### Media Services
-##### Machine Learning
-##### Analytics
-##### Security & Identity & Compliance
-##### Mobile Services
-##### AR / VR
-##### Application Integration
-##### Customer Engagement
-##### Business Productivity
-##### Desktop & App Streaming
-##### IoT
-##### Game Development
+-------
+
+#### Identity Access Management (IAM)
+
+###### Terminologiy:
+- Users: End Users.
+- Groups: A collection of users under one set of permissions.
+- Roles: You create roles and can then assign them to AWS resources.
+- Policies: A document that defines one (or more permissions). You apply policy documents on top of Users/Groups/Roles. (JSON format)
+
+###### What is IAM?
+- IAM allows you to manage users and their level of access to the AWS console. It is important to understand IAM and how it works, both for the exam and for administrating a company's AWS account in real life.
+
+###### What does IAM give you?
+- Centralised control of your AWS account.
+- Shared access to your AWS account.
+- Granular permissions.
+- Identity federation (including Active Directory, Facebook, LinkedIn etc).
+- Multifactor authentication.
+- Provide temporary access for users/devices and services where necessary.
+- Allows you to set up your own password rotation policy.
+- Integrates with many different AWS services.
+- Supports PCI DSS compliance.
+
+###### IAM Details
+- IAM is **Global** because users, groups, roles, policies are globally available.
+- Best practise for AWS is to create a root account and uses it to create an account with assigned permissions. Root account is only to be logged in once or twice when needed to.
+- After creating the users, the Access key and Secret Access key are for AWS APIs and you are **only going to see them once**, if you lose it you will have to create another pair...
+- New users have no permissions when first created.
+- Always set up multifactor auth on root account!
+- You can create & customise password rotation policies.
 
 
+-------------
+#### S3
+
+###### Intro
+
+- "Simple Storage Service".
+- Provides secure, durable, scalable object storage.
+- The data is spread across multiple devices & facilities.
+- Upload files: 0B - 5TB. Unlimited storage, price is calculated by space occupied...
+- Files are stored in Buckets (Like a folder in the cloud). However, each Bucket's name must be unique globally (universal namespace).
+- Bucket url: e.g. https://s3-eu-west-1.amazonaws.com/eastrd
+- When you upload a file to S3, you will receive a HTTP 200 if upload is successful.
+
+###### Data Consistency Model
+- **Read after Write consistency** for PUTS of new objects.
+- **Eventual Consistency** for overwrite PUTS and DELETES (can take some time to propagate, i.e. The content could still be the old ones in some time).
+
+###### Key-Value Store
+- Key (Name of the object)
+- Value (the data that's made up by a sequence of bytes)
+- Version ID (important for versioning)
+- Metadata 
+- Subresources:
+  - Access Control Lists (individual permissions on files)
+  - Torrents
+
+###### S3 Basics
+- Built & Guaranteed for 99.99% availability.
+- Amazon guarantees 99.999999999% durability for S3 information (11 9's)
+- Tiered storage available. (different storage classes).
+- Lifecycle management (Similar to log rotation).
+- Version control on files.
+- Encryptions.
+- Secure your data using Access Control List (individual files) or Bucket policies (bucket level).
+
+###### S3 Storage Tiers / Classes
+- S3 Standard: 99.99% availability, 99.99999999% durability, stored redundently across multiple devices in multiple facilities, and is designed to sustain the loss of 2 facilities concurrently.
+- S3 IA: "Infrequent Accessed" - For data that is accessed less frequently, but requires rapid access when needed. Lower fee than S3, but you are charged a retrieval fee. Just like S3 Standard, it is stored across multiple facilities and multiple devices.
+- S3, One Zone, IA: Lower cost option for infrequent accessed data, but do not require the multiple Availability Zone data resilience. (**1 AZ Only**)
+- Glacier: Cheapest storage, for data archieval only: Expedidited (restored within few mins), Standard, Bulk(5-12h). A Standard retrieval takes 3-5 hours.
+- Lowest cost + Don't care about retrieval times: Glacier.
+- Low cost + Care about retrieval times: IA.
+- Don't care cost + Durable: S3 Standard.
+
+###### S3 Charges
+- Storage (/GB)
+- # Requests
+- Storage Management Pricing (~tags, i.e. Metadata)
+- Data Transfer Pricing (Transferring data from one region to another: Cross-Region-Replication)
+- Transfer Acceleration (Uses CloudFront: Edge locations ~CDNs)
+
+##### READ S3 FAQ BEFORE EXAM
