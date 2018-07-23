@@ -228,15 +228,19 @@
 -------------
 #### S3
 
-###### Intro
-
-- "Simple Storage Service".
-- Provides secure, durable, scalable object storage.
-- The data is spread across multiple devices & facilities.
+###### Basics
+- S3 stands for "Simple Storage Service".
+- Secure, Durable, Scalable object storage.
 - Upload files: 0B - 5TB. Unlimited storage, price is calculated by space occupied...
-- Files are stored in Buckets (Like a folder in the cloud). However, each Bucket's name must be unique globally (universal namespace).
-- Bucket url: e.g. https://s3-eu-west-1.amazonaws.com/eastrd
+- Buckets have a universal name space.
+- Bucket url rules: e.g. https://s3-eu-west-1.amazonaws.com/eastrd
 - When you upload a file to S3, you will receive a HTTP 200 if upload is successful.
+- Optional encryptions: Client side / Server side:
+   - Amazon S3 Managed Keys (SSE-S3).
+   - KMS (SSE-KMS).
+   - Customer Provided Keys (SSE-C).
+- Control access to buckets using bucket ACL / Policies.
+- By default, all buckets are **private** and all objects stored inside them are **private**.
 
 ###### Data Consistency Model
 - **Read after Write consistency** for PUTS of new objects.
@@ -260,7 +264,7 @@
 - Encryptions.
 - Secure your data using Access Control List (individual files) or Bucket policies (bucket level).
 
-###### S3 Storage Tiers / Classes
+###### Storage Tiers / Classes
 - S3 Standard: 99.99% availability, 99.99999999% durability, stored redundently across multiple devices in multiple facilities, and is designed to sustain the loss of 2 facilities concurrently.
 - S3 IA: "Infrequent Accessed" - For data that is accessed less frequently, but requires rapid access when needed. Lower fee than S3, but you are charged a retrieval fee. Just like S3 Standard, it is stored across multiple facilities and multiple devices.
 - S3, One Zone, IA: Lower cost option for infrequent accessed data, but do not require the multiple Availability Zone data resilience. (**1 AZ Only**)
@@ -269,11 +273,33 @@
 - Low cost + Care about retrieval times: IA.
 - Don't care cost + Durable: S3 Standard.
 
-###### S3 Charges
+###### Charges
 - Storage (/GB)
-- # Requests
+- Number of Requests
 - Storage Management Pricing (~tags, i.e. Metadata)
 - Data Transfer Pricing (Transferring data from one region to another: Cross-Region-Replication)
 - Transfer Acceleration (Uses CloudFront: Edge locations ~CDNs)
+
+###### Version Control
+- Stores all version of an object (including all writes and even if you delete an object - places a "Delete Marker" on the file, need to delete the version in order to "truly" delete)
+- Great backup tool, but not ideal if there are frequent changes to big files.
+- Once enabled, Versioning cannot be disabled, only suspended.
+- Integrates with Lifecycle rules.
+- Versioning's MFA Delete capcability can be used to provide additional layer of security.
+
+###### Cross Region Replication (CRR)
+- Versioning must be enabled on both **source** and **destination** buckets.
+- Regions must be unique, you cannot replicate buckets in the same region.
+- Files in an existing bucket are not replicated, but can be copied using AWS cli. All subsequent files will be replicated automatically.
+- You cannot replicate to mutliple buckets or use daisy chaining.
+- Delete markers are replicated, but deletion aren't replicated.
+
+###### Lifecycle Management
+- Can be used in conjunction with versioning.
+- Can be applied to **current** and **previous** versions.
+- Actions can be done:
+  - Transition to Standard - IA storage class (Minimum 30 days after creation date)
+  - Archive to Glacier storage class (30 days after IA, if relevant).
+  - Permantly delete.
 
 ##### READ S3 FAQ BEFORE EXAM
