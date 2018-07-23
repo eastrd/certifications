@@ -303,3 +303,28 @@
   - Permantly delete.
 
 ##### READ S3 FAQ BEFORE EXAM
+
+
+----------
+
+#### CloudFront
+
+###### What is a CDN ("Content Delivery Network")
+-  A system of distributed servers (network) that delivers resources to a user based on the geographical locations of the user, orign of the resource and the CDN server.
+- Terminology:
+   - Edge locations: Where resources are cached.
+   - Origin: This is the origin of all files that the CDN will distribute. It can be an S3 bucket, an EC2 instance, an Elastic Load Balancer (with EC2 instances behind it) or Route53.
+   - Distribution: Name given to the CDN which consistes of a collection of Edge Locations.
+   - Web Distribution: Typically used for Websites.
+   - RTMP: Used for Media Streaming.
+
+###### How does CloudFront work
+- It can be used to deliver your resource (static, dynamic, streaming and interactive) using a global network of edge locations.
+- Requests for resource are automatically routed to the nearest edge location for optimal performance.
+- AWS CloudFront is optimized to work with other AWS services, but would also work for non-AWS origin resources.
+- Edge locations are not just READ only, it can be written too.
+- Objects are cached for the life of TTL.
+- You can clear cached objects, but you will be charged... ("Invalidation")
+- You can restrict viewer access to CloudFront CDNs using **Signed URLs** or **Signed Cookies**.
+
+###### 
