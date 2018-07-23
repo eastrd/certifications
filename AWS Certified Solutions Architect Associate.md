@@ -302,6 +302,18 @@
   - Archive to Glacier storage class (30 days after IA, if relevant).
   - Permantly delete.
 
+###### Security & Encryption
+- Two types of encryption:
+   - In Transit:
+      - SSL / TLS
+   - At Rest:
+      - Server Side Encryption
+	     - S3 Managed Keys - SSE-S3
+		 - AWS Key Management Service, Managed Keys - SSE-KMS
+		 - Customer Provided Keys - SSE-C
+	  - Client Side Encryption
+
+
 ##### READ S3 FAQ BEFORE EXAM
 
 
