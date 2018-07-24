@@ -272,6 +272,7 @@
 - Lowest cost + Don't care about retrieval times: Glacier.
 - Low cost + Care about retrieval times: IA.
 - Don't care cost + Durable: S3 Standard.
+- ![](https://i.imgur.com/q2agdi2.png)
 
 ###### Charges
 - Storage (/GB)
@@ -339,4 +340,22 @@
 - You can clear cached objects, but you will be charged... ("Invalidation")
 - You can restrict viewer access to CloudFront CDNs using **Signed URLs** or **Signed Cookies**.
 
-###### 
+----------
+
+#### Storage Gateway
+
+###### What is it
+- A service that connects on-premise software appliance with AWS cloud-based storage.
+- AWS Storage Gateway software appliance is available for download as a VM image to be installed on a host in your datacenter.
+
+###### Types of Storage Gateways
+- File Gateway (NFS): Store flat files in S3.
+	- Ownership, permissions, timestamps are durably stored in S3 in the user-metadata of the object associated with the file.
+	- Once objects are transferred to S3, they can be managed as native S3 objects.
+	- ![](https://i.imgur.com/N5lT3rB.png "demonstration")
+- Volumes Gateway (iSCSI): Block-based storage - OSes, SQL Server, etc... Data written to these volumes can be asynchronously backed up as point-in-time snapshots of your volumes, and stored in the cloud as Amazon EBS snapshots. Snapshots are incremental backups that capture only changed blocks. All snapshots storage is also compressed to minimize your storage charges.
+	- Stored Volumes
+	- Cached Volumes
+- Tape Gateway (VTL): Backup/Archiving solution.
+
+
